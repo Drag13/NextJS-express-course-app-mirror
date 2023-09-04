@@ -1,12 +1,16 @@
+import { getAllArticles } from "./db";
 import styles from "./page.module.css";
-import db from "./data.json";
+import { Like } from "./shared/like";
 
-export default function Home() {
+export default async function Home() {
+  const articles = await getAllArticles();
   return (
     <main className={styles.main}>
       <ul>
-        {db.articles.map((x) => (
-          <li key={x.title}>{x.title}</li>
+        {articles.map((x) => (
+          <li key={x.title}>
+            {x.title} <Like />
+          </li>
         ))}
       </ul>
     </main>

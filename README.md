@@ -39,3 +39,5 @@ const nextConfig = {
   output: "standalone",
 };
 ```
+
+## Add 'use client`

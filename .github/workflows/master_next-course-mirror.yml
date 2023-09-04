@@ -29,6 +29,7 @@ jobs:
 
       - name: copy files
         run: |
+          mkdir .next/standalone/_next
           cp -R .next/static .next/standalone/_next/static
           cp -R ./public .next/standalone/public
 

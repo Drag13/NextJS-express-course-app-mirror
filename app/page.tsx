@@ -1,6 +1,6 @@
-import { getAllArticles } from "./db";
-import styles from "./page.module.css";
-import { Like } from "./shared/like";
+import { getAllArticles } from './db';
+import styles from './page.module.css';
+import { Like } from './shared/like';
 
 export default async function Home() {
   const articles = await getAllArticles();
